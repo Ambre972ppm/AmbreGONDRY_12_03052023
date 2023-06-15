@@ -1,0 +1,21 @@
+// General 
+@import './sass/base/general-settings.scss';
+
+// Pages Styles
+@import './pages/Error/Error.scss';
+@import './pages/Community/Community.scss';
+@import './pages/Home/Home.scss';
+@import './pages/Profile/Profile.scss';
+@import './pages/Setting/Setting.scss';
+
+// Components Styles
+@import './components/Banner/Banner.scss';
+@import './components/BarChart/BarChart.scss';
+@import './components/Header/Header.scss';
+@import './components/LineGraph/LineGraph.scss';
+@import './components/RadarChart/RadarChart.scss';
+@import './components/Sidebar/SideBar.scss';
+
+// Utils
+@import './sass/utils/mixins.scss';
+@import './sass/utils/variables.scss';
