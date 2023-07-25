@@ -1,34 +1,28 @@
-/* .error-component {
-    color: #FF6060;
+@import '../../sass/utils/variables.scss';
+
+.Error-page {
     display: flex;
     flex-direction: column;
     justify-content: center;
     max-height: 80vh;
-
-}
-
-.error-title{
-    font-size: 150px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 0;
-}
-
-.error-quote {
-    font-weight: 500;
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 10rem;
-}
-
-.error-back-link {
-    text-decoration: underline;
-    color: #FF6060;
-    text-align: center;
-    margin-bottom: 10rem;
-}
-
-@media screen and (max-width: 500px) {
+    .error-title{
+        font-size: 150px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .error-quote {
+        font-weight: 500;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 10rem;
+    }
+    .error-back-link {
+        text-decoration: underline;
+        color: $primary-color;
+        text-align: center;
+        margin-bottom: 10rem;
+    }
     .error-component {
         padding: 5rem;
     }
@@ -38,4 +32,8 @@
         text-align: center;
         margin-bottom: 0;
     }
-} */
+    
+    
+
+}
+

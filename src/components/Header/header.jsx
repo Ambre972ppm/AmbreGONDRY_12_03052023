@@ -3,6 +3,7 @@ import './Header.scss'
 import { NavLink, Link } from 'react-router-dom';
 
 function Header() {
+	const userId = 12;
 
     return (<div className="sportsee-header">
                 <Link className="sportsee-header-logo" to="/">
@@ -16,7 +17,7 @@ function Header() {
                     <NavLink   className={({ isActive }) =>
 						        isActive ? 'nav-active' : 'nav-idle'
 					        }
-                            to="/profile/:id">Profil</NavLink>
+                            to={`/user/${userId}`}>Profil</NavLink>
                     <NavLink   className={({ isActive }) =>
 						        isActive ? 'nav-active' : 'nav-idle'
 					        }

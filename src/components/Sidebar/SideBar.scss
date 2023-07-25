@@ -1,11 +1,11 @@
 .Sidebar {
 	z-index: 1;
-	position: fixed;
+	position: absolute;
 	top: 90px;
 	left: 0;
     bottom: 0;
 	width: 117px;
-	height: 100%;
+	min-height: 100%;
 	overflow: hidden;
 	background: #020203;
 	text-align: center;

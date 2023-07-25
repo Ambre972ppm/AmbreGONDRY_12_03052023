@@ -9,11 +9,13 @@
 @import './pages/Setting/Setting.scss';
 
 // Components Styles
-@import './components/Banner/Banner.scss';
-@import './components/BarChart/BarChart.scss';
+@import './components/FoodDataCard/FoodDataCard.scss';
+@import './components/ChartsCards/ChartsCards.scss';
+@import './components/BarChartActivity/BarChartActivity.scss';
+@import './components/DonutChartGoal/DonutChartGoal.scss';
 @import './components/Header/Header.scss';
-@import './components/LineGraph/LineGraph.scss';
-@import './components/RadarChart/RadarChart.scss';
+@import './components/LineGraphSession/LineGraphSession.scss';
+@import './components/RadarChartPerformance/RadarChartPerformance.scss';
 @import './components/Sidebar/SideBar.scss';
 
 // Utils
