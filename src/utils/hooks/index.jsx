@@ -40,15 +40,4 @@ export function useFetch(urlAPI, userId, urlMockedData) {
 	}, [urlAPI, userId, urlMockedData])
 	return { isLoading, apiData, mockedData, errorAPI, errorMocked }
 }
-
-export function useChooseUser() {
-	const [userId, setUserId] = useState(12);
-
-  const handleToggleChange = () => {
-    setUserId((prevUserId) => (prevUserId === 12 ? 18 : 12));
-  };
-
-  
-	return { userId, handleToggleChange };
-  }
   
