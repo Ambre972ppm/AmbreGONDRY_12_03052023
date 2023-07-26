@@ -1,9 +1,12 @@
 import logo from '../../assets/logos/logo.png'
+import { useUser } from '../../utils/context/UserProvider/userProvider';
 import './Header.scss'
 import { NavLink, Link } from 'react-router-dom';
 
 function Header() {
-	const userId = 12;
+
+    const { userId } = useUser();
+
 
     return (<div className="sportsee-header">
                 <Link className="sportsee-header-logo" to="/">

@@ -1,16 +1,17 @@
-import React, { useState, createContext } from 'react'
+import { createContext, useContext, useState } from 'react';
 
-export const UserContext = createContext()
+const UserContext = createContext();
 
-export const UserProvider = ({ children }) => {
-  const [user, setUser] = useState('id')
-  const toggleUser = () => {
-    setUser(user === '12' ? '18' : '12')
-  }
+export function UserProvider({ children }) {
+  const [userId, setUserId] = useState(12);
 
   return (
-    <UserContext.Provider value={{ user, toggleUser }}>
+    <UserContext.Provider value={{ userId, setUserId }}>
       {children}
     </UserContext.Provider>
-  )
+  );
+}
+
+export function useUser() {
+  return useContext(UserContext);
 }

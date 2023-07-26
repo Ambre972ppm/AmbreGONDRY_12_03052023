@@ -89,39 +89,44 @@ h1 {
         transition: 0.3s ease all;
         z-index: 1;
     }
-
-    #button-1 .knobs:before {
-        content: "Karl";
-        position: absolute;
-        top: 4px;
-        left: 4px;
-        width: 40px;
-        height: 10px;
-        color: #fff;
-        font-size: 10px;
-        font-weight: bold;
-        text-align: center;
-        line-height: 1;
-        padding: 9px 4px;
-        background-color: #020203;
-        border-radius: 100px;
-        transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
-      }
-      
-      #button-1 .checkbox:checked + .knobs:before {
-        content: "Cecilia";
-        left: 68px;
-        background-color: #ff0101;;
-      }
-      
-      #button-1 .checkbox:checked ~ .layer {
-        background-color: #fcebeb;
-      }
-      
-      #button-1 .knobs,
-      #button-1 .knobs:before,
-      #button-1 .layer {
-        transition: 0.3s ease all;
-      }
      
 }  
+
+#button-1 .knobs:before {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 40px;
+  height: 10px;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  padding: 9px 4px;
+  border-radius: 100px;
+  transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+
+#button-1 .knobs,
+#button-1 .knobs:before,
+#button-1 .layer {
+transition: 0.3s ease all;
+}
+
+.user-choice.karl #button-1 .knobs:before {
+  content: "Karl";
+  left: 4px;
+  color: #fff;
+  background-color: #020203;
+}
+
+// Styles pour le bouton sélectionné à Cecilia (userId = 18)
+.user-choice.cecilia #button-1 .checkbox:checked + .knobs:before {
+  content: "Cecilia";
+  left: 68px;
+  background-color: #ff0101;
+}
+
+.user-choice.cecilia #button-1 .checkbox:checked ~ .layer {
+  background-color: #fcebeb;
+}

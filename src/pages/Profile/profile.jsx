@@ -1,5 +1,3 @@
-import { useParams } from 'react-router-dom'
-
 import { useFetch } from '../../utils/hooks'
 import FoodDataCard from '../../components/FoodDataCard/foodDataCard'
 import ChartsCards from '../../components/ChartsCards/chartsCards'
@@ -13,32 +11,33 @@ import proteines from '../../assets/icons/proteines.svg'
 import glucides from '../../assets/icons/glucides.svg'
 import lipides from '../../assets/icons/lipides.svg'
 import './Profile.scss';
+import { useUser } from '../../utils/context/UserProvider/userProvider'
 
 function Profile() {
   document.title = 'Profil - SportSee'
 
-	const { userId } = useParams()
+	const { userId } = useUser()
 
-	/* Fetch the data from API or mocked data */
+	// Fetch Data from Api or Mocked Data 
 	const user = useFetch(
-		`http://localhost:3000/user/${userId}`,
+		`http://localhost:3000/user/${userId}`, // data from Api
 		userId,
-		// window.location.origin + '/SportSee/mocked-data/user-main-data.json'
+		'../../../public/mocked-data/user-main-data.json' // data from Mocked Data Json
 	)
 	const activity = useFetch(
-		`http://localhost:3000/user/${userId}/activity`,
+		`http://localhost:3000/user/${userId}/activity`, // data from Api
 		userId,
-		// window.location.origin + '/SportSee/mocked-data/user-activity.json'
+		'../../../public/mocked-data/user-activity.json' // data from Mocked Data Json
 	)
 	const averageSessions = useFetch(
-		`http://localhost:3000/user/${userId}/average-sessions`,
+		`http://localhost:3000/user/${userId}/average-sessions`, // data from Api
 		userId,
-		// window.location.origin + '/SportSee/mocked-data/user-average-sessions.json'
+		'../../../public/mocked-data/user-average-sessions.json' // data from Mocked Data Json
 	)
 	const performance = useFetch(
-		`http://localhost:3000/user/${userId}/performance`,
+		`http://localhost:3000/user/${userId}/performance`, // data from Api
 		userId,
-		// window.location.origin + '/SportSee/mocked-data/user-performance.json'
+		'../../../public/mocked-data/user-performance.json' // data from Mocked Data Json
 	)
 
 	const formatData = (dataObject, apiData) => {
@@ -46,10 +45,10 @@ function Profile() {
 			dataObject = apiData.apiData
 			return dataObject
 		} 
-		// else if (apiData.mockedData) {
-		// 	dataObject = apiData.mockedData
-		// 	return dataObject
-		// }
+		else if (apiData.mockedData) {
+			dataObject = apiData.mockedData
+			return dataObject
+		}
 	}
 
 	/* Init the dataObject and format the data */
