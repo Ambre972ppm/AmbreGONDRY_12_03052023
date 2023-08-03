@@ -12,13 +12,9 @@ function CustomToolTip({ active, payload }) {
 }
 
 CustomToolTip.propTypes = {
-	/**
-	 * Whether or not the tooltip is active
-	 */
+	
 	active: PropTypes.bool,
-	/**
-	 * The payload of the tooltip
-	 */
+	
 	payload: PropTypes.arrayOf(PropTypes.object),
 }
 

@@ -93,12 +93,12 @@ function Profile() {
 		<section className="profil-wrapper">
 			{userData && (
 				<div className="profil">
-					<h2 className="profil-title">
+					<h1 className="profil-title">
 						Bonjour{' '}
 						<span className="profil-firstName">
 							{userData.userInfos.firstName}
 						</span>
-					</h2>
+					</h1>
 					<p className="profil-subtitle">
 						Félicitation ! Vous avez explosé vos objectifs hier 👏
 					</p>
@@ -117,9 +117,7 @@ function Profile() {
 										className="average-sessions"
 										content={
 											<LineGraphSession
-												data={
-													averageSessionsData.sessions
-												}
+												data={averageSessionsData.sessions}
 											/>
 										}
 									/>

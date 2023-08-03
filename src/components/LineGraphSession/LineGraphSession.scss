@@ -1,6 +1,6 @@
-/* ---------------------------------------- */
-/* ==       CHART AVERAGE SESSIONS       */
-/*---------------------------------------- */
+.responsive-container {
+	margin: auto;
+}
 .average-sessions {
 	position: relative;
 	.tooltip {
@@ -16,14 +16,13 @@
 	}
 }
 
-.chartaverage-sessions {
-	&-title {
-		position: absolute;
-		top: 1.8125rem;
-		left: 2.125rem;
+.line-graph-session-title {
+		margin-top: 1.5rem;
+		margin-left: 2rem;
+		margin-bottom: 0;
+		width: 50%;
 		color: #fff;
 		font-size: 0.9375rem;
 		font-weight: 500;
 		opacity: 0.6;
-	}
 }

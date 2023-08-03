@@ -3,12 +3,12 @@ import './Setting.scss';
 function Setting() {
   return (
     <div className="Setting">
-      <div class="object">
-        <div class="object-rope"></div>
-        <div class="object-shape">
+      <div className="object">
+        <div className="object-rope"></div>
+        <div className="object-shape">
           en cours
           <br/>
-          <span class="soon">de</span>
+          <span className="soon">de</span>
           <br/>
           construction
         </div>

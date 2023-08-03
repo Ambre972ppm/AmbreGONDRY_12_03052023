@@ -1,8 +1,15 @@
 @import '../../sass/utils/variables.scss';
 
-h1 {
+.home {
+  width: 90vw;
+	margin: auto;
+	padding-left: 10px;
+	@include desktop-breakpoint {
+		width: fit-content;
+		padding-left: 0;
+	}
+  &-title {
     font-size: 3rem;
-    margin-left: 117px;
     .sportsee {
         color: $primary-color;
     }
@@ -12,11 +19,10 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    width: 75vw;
     .row {
     display: table-row;
     }
-
     .toggle-button-cover {
         display: table-cell;
         position: relative;
@@ -129,4 +135,6 @@ transition: 0.3s ease all;
 
 .user-choice.cecilia #button-1 .checkbox:checked ~ .layer {
   background-color: #fcebeb;
+}
+
 }

@@ -1,18 +1,17 @@
 .Sidebar {
 	z-index: 1;
-	position: absolute;
-	top: 90px;
+	position: fixed;
+	top: 0;
 	left: 0;
     bottom: 0;
 	width: 117px;
-	min-height: 100%;
-	overflow: hidden;
+	// overflow: auto;
 	background: #020203;
 	text-align: center;
     .sidebar-buttons {
         position: absolute;
         height: 100%;
-        top: 15%;
+        top: 30%;
         .sidebar-button {
             width: 4rem;
             height: 4rem;
@@ -28,7 +27,7 @@
     }
     .copyright {
         position: absolute;
-        bottom: 25%;
+        bottom: 10%;
         left: -8%;
         width: max-content;
         margin: 0;

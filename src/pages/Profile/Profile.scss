@@ -1,8 +1,5 @@
 @import '../../sass/utils/variables.scss';
 
-/* ---------------------------------------- */
-/* ==                PROFIL                 */
-/*---------------------------------------- */
 .profil {
 	width: 830px;
 	margin: auto;
@@ -22,7 +19,8 @@
 		margin: 0;
 		margin-top: 2.5625rem;
 		margin-bottom: 4.8125rem;
-		font-size: 1.125rem;
+		font-size: 1rem;
+		text-align: left;
 	}
 }
 

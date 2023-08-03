@@ -1,11 +1,9 @@
-/* ---------------------------------------- */
-/* ==              CHART GOAL              */
-/*---------------------------------------- */
+
 .score {
 	position: relative;
 }
 
-.chartgoal {
+.donut-chart-goal {
 	&-title {
 		position: absolute;
 		top: 1.5rem;
@@ -15,6 +13,9 @@
 		font-weight: 500;
 	}
 	&-label {
+		position: absolute;
+		top: 35%;
+		left: 38%;
 		color: #9b9eac;
 		font-weight: 500;
 		line-height: 1.625rem;
