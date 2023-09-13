@@ -3,24 +3,9 @@ import PropTypes from 'prop-types';
 import './RadarChartPerformance.scss';
 
 function RadarChartPerformance({ data }) {
-  /**
-	 * Function to render the labels of the chart in a Text component
-	 *
-	 * @param { Object } payload - The payload of the labels
-	 * @param { Number } x - The x position of the label
-	 * @param { Number } y - The y position of the label
-	 * @param { Number } cx - The x position of the center of the label
-	 * @param { Number } cy - The y position of the center of the label
-	 * @param { Object } rest - The rest of the props of the label
-	 * @returns A function that returns a Text component
-	 */
+  console.log(data)
 	const renderPolarAngleAxis = ({ payload, x, y, cx, cy, ...rest }) => {
-		/**
-		 * Function to translate the labels of the chart
-		 *
-		 * @param { String } value - The value of the label
-		 * @returns { String } The translated value of the label
-		 */
+		
 		const formatLabel = (value) => {
 			if (value === 'Energy') return 'Energie'
 			if (value === 'Strength') return 'Force'
@@ -48,7 +33,7 @@ function RadarChartPerformance({ data }) {
 
 	return (
     <div className="RadarChartPerformance">
-			<ResponsiveContainer width="100%" height="100%">
+			<ResponsiveContainer width="100%" height={275}>
 				<RadarChart outerRadius={90} data={[...data.data].reverse()}>
 					<PolarGrid radialLines={false} />
 					<PolarAngleAxis
