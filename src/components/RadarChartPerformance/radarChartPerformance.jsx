@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import './RadarChartPerformance.scss';
 
 function RadarChartPerformance({ data }) {
-  console.log(data)
 	const renderPolarAngleAxis = ({ payload, x, y, cx, cy, ...rest }) => {
 		
 		const formatLabel = (value) => {

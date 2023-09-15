@@ -6,7 +6,6 @@ import DonutGoalChart from '../../components/DonutChartGoal/donutChartGoal'
 import RadarChartPerformance from '../../components/RadarChartPerformance/radarChartPerformance'
 
 function ProfileCharts({ activityFormatData, averageSessionsFormatData, performanceFormatData, userFormatData }) {
-    console.log(activityFormatData)
     return (
 
         <div className='profile-charts'>
