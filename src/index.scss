@@ -1,0 +1,23 @@
+// Import des paramètres généraux
+@import './sass/base/general-settings.scss';
+
+// Styles des pages
+@import './pages/Error/Error.scss';
+@import './pages/Community/Community.scss';
+@import './pages/Home/Home.scss';
+@import './pages/Profile/Profile.scss';
+@import './pages/Setting/Setting.scss';
+
+// Styles des composants
+@import './components/FoodDataCard/FoodDataCard.scss';
+@import './components/ChartsCards/ChartsCards.scss';
+@import './components/BarChartActivity/BarChartActivity.scss';
+@import './components/DonutChartGoal/DonutChartGoal.scss';
+@import './components/Header/Header.scss';
+@import './components/LineGraphSession/LineGraphSession.scss';
+@import './components/RadarChartPerformance/RadarChartPerformance.scss';
+@import './components/Sidebar/SideBar.scss';
+
+// Import des utils
+@import './sass/utils/mixins.scss';
+@import './sass/utils/variables.scss';

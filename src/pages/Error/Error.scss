@@ -1,0 +1,39 @@
+@import '../../sass/utils/variables.scss';
+
+.Error-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 80vh;
+    .error-title{
+        font-size: 150px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .error-quote {
+        font-weight: 500;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 10rem;
+    }
+    .error-back-link {
+        text-decoration: underline;
+        color: $primary-color;
+        text-align: center;
+        margin-bottom: 10rem;
+    }
+    .error-component {
+        padding: 5rem;
+    }
+    .error-title{
+        font-size: 100px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    
+    
+
+}
+

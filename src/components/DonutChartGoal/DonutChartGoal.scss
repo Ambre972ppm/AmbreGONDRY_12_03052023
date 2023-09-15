@@ -1,0 +1,35 @@
+.score {
+	position: relative; // Positionnement relatif pour les éléments à l'intérieur de .score
+  }
+  
+  .donut-chart-goal {
+	&-title {
+	  position: absolute; // Position absolue pour le titre
+	  top: 1.5rem;
+	  left: 1.875rem;
+	  color: #20253a;
+	  font-size: 0.9375rem;
+	  font-weight: 500;
+	}
+  
+	&-label {
+	  position: absolute; // Position absolue pour l'étiquette
+	  top: 35%;
+	  left: 38%;
+	  color: #9b9eac;
+	  font-weight: 500;
+	  line-height: 1.625rem;
+	  text-align: center;
+  
+	  p {
+		margin: 0; // Supprime les marges par défaut pour les paragraphes
+	  }
+  
+	  .percent {
+		color: #282d30; // Couleur du pourcentage
+		font-size: 1.625rem; // Taille de police du pourcentage
+		font-weight: 700; // Poids de police en gras pour le pourcentage
+	  }
+	}
+  }
+  

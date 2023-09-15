@@ -1,0 +1,41 @@
+.Sidebar {
+	z-index: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+    bottom: 0;
+	width: 117px;
+	// overflow: auto;
+	background: #020203;
+	text-align: center;
+    .sidebar-buttons {
+        position: absolute;
+        height: 100%;
+        top: 30%;
+        .sidebar-button {
+            width: 4rem;
+            height: 4rem;
+            margin-bottom: 1.25rem;
+            border: none;
+            border-radius: 6px;
+            background-color: #ffffff;
+            &-logo {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+    }
+    .copyright {
+        position: absolute;
+        bottom: 10%;
+        left: -8%;
+        width: max-content;
+        margin: 0;
+        transform: rotate(-90deg);
+        color: #ffffff;
+        font-family: 'Roboto';
+        font-size: 0.75rem;
+        font-weight: 500;
+    }
+}
+

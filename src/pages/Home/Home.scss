@@ -1,0 +1,149 @@
+// Import des variables de style
+@import '../../sass/utils/variables.scss';
+
+// Styles pour la classe home
+.home {
+    width: 90vw;
+    margin: auto;
+    padding-left: 10px;
+    
+    @include desktop-breakpoint {
+        width: fit-content;
+        padding-left: 0;
+    }
+    
+    &-title {
+        font-size: 3rem;
+        
+        // Styles pour la partie "SportSee" du titre
+        .sportsee {
+            color: $primary-color;
+        }
+    }
+}
+
+// Styles pour la classe user-choice
+.user-choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75vw;
+    
+    .row {
+        display: table-row;
+    }
+    
+    .toggle-button-cover {
+        display: table-cell;
+        position: relative;
+        width: 200px;
+        height: 140px;
+        box-sizing: border-box;
+    }
+
+    .button-cover {
+        height: 100px;
+        margin: 20px;
+        background-color: #fff;
+        border-radius: 4px;
+    }
+    
+    .button-cover:before {
+        counter-increment: button-counter;
+        content: counter(button-counter);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        color: #d7e3e3;
+        font-size: 12px;
+        line-height: 1;
+        padding: 5px;
+    }
+    
+    .button-cover,
+    .knobs,
+    .layer {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    
+    .button {
+        position: relative;
+        top: 50%;
+        width: 120px;
+        height: 36px;
+        margin: -20px auto 0 auto;
+        overflow: hidden;
+    }
+    
+    .button.r,
+    .button.r .layer {
+        border-radius: 100px;
+    }
+    
+    .checkbox {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 3;
+    }
+    
+    .knobs {
+        z-index: 2;
+    }
+    
+    .layer {
+        width: 100%;
+        background-color: #ebf7fc;
+        transition: 0.3s ease all;
+        z-index: 1;
+    }
+}
+
+// Styles pour le bouton de sélection
+#button-1 .knobs:before {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 40px;
+    height: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+    border-radius: 100px;
+    transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+
+#button-1 .knobs,
+#button-1 .knobs:before,
+#button-1 .layer {
+    transition: 0.3s ease all;
+}
+
+// Styles pour l'utilisateur Karl
+.user-choice.karl #button-1 .knobs:before {
+    content: "Karl";
+    left: 4px;
+    color: #fff;
+    background-color: #020203;
+}
+
+// Styles pour le bouton sélectionné à Cecilia (userId = 18)
+.user-choice.cecilia #button-1 .checkbox:checked + .knobs:before {
+    content: "Cecilia";
+    left: 68px;
+    background-color: #ff0101;
+}
+
+.user-choice.cecilia #button-1 .checkbox:checked ~ .layer {
+    background-color: #fcebeb;
+}
