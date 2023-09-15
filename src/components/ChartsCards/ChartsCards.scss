@@ -1,16 +1,18 @@
-
 .charts-card {
 	width: 17rem;
 	height: 17rem;
 	border-radius: 5px;
 	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+  
 	&.average-sessions {
-		background-color: #ff0000;
+	  background-color: #ff0000; // Fond rouge pour la classe .average-sessions
 	}
+  
 	&.performance {
-		background-color: #282d30;
+	  background-color: #282d30; // Fond bleu foncé pour la classe .performance
 	}
+  
 	&.score {
-		background-color: #fbfbfb;
+	  background-color: #fbfbfb; // Fond blanc pour la classe .score
 	}
-}
+  }

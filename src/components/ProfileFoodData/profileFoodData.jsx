@@ -9,6 +9,7 @@ function ProfileFoodData({ userFormatData }) {
     const { keyData } = userFormatData;
     return (
         <div className="profil-food-data">
+            {/* Carte de données alimentaires - Calories */}
             <FoodDataCard
                 userKeyData={keyData.calorieCount}
                 unit="kCal"
@@ -16,6 +17,8 @@ function ProfileFoodData({ userFormatData }) {
                 className="calorie"
                 logo={calories}
             />
+
+            {/* Carte de données alimentaires - Protéines */}
             <FoodDataCard
                 userKeyData={keyData.proteinCount}
                 unit="g"
@@ -23,6 +26,8 @@ function ProfileFoodData({ userFormatData }) {
                 className="protein"
                 logo={proteines}
             />
+
+            {/* Carte de données alimentaires - Glucides */}
             <FoodDataCard
                 userKeyData={keyData.carbohydrateCount}
                 unit="g"
@@ -30,6 +35,8 @@ function ProfileFoodData({ userFormatData }) {
                 className="carbohydrate"
                 logo={glucides}
             />
+
+            {/* Carte de données alimentaires - Lipides */}
             <FoodDataCard
                 userKeyData={keyData.lipidCount}
                 unit="g"

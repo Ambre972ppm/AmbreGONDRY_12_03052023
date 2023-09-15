@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import CustomToolTip from './CustomToolTip';
 
 function LineGraphSession({ data }) {
+  // Fonction pour formater les étiquettes de l'axe X
   const formatLabel = (value) => {
     if (value === 1) return 'L';
     if (value === 2) return 'M';
@@ -61,7 +62,7 @@ function LineGraphSession({ data }) {
 
 LineGraphSession.propTypes = {
   /**
-   * Data to be displayed in the chart
+   * Données à afficher dans le graphique
    */
   data: PropTypes.arrayOf(PropTypes.object).isRequired,
 };

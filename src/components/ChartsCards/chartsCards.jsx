@@ -1,27 +1,17 @@
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
-import './ChartsCards.scss'
+import './ChartsCards.scss';
 
-/**
- * Render a div (charts-card) containing the charts
- *
- * @category Components
- * @component
- * @returns { React.Component } A React component
- */
 function ChartsCards({ className, content }) {
-	return <div className={'charts-card ' + className}>{content}</div>
+  // Le composant renvoie un élément div avec une classe définie par `className`
+  // et le contenu passé en tant que propriété `content`.
+  return <div className={'charts-card ' + className}>{content}</div>;
 }
 
+// Définition des types de propriétés attendues et de leurs validations
 ChartsCards.propTypes = {
-	/**
-	 * Class name of the charts-card
-	 */
-	className: PropTypes.string,
-	/**
-	 * Content of the charts-card
-	 */
-	content: PropTypes.object.isRequired,
-}
+  className: PropTypes.string, // Une chaîne de caractères pour la classe CSS
+  content: PropTypes.object.isRequired, // Un objet (ou tout autre type) requis
+};
 
-export default ChartsCards
+export default ChartsCards;
