@@ -41,8 +41,16 @@
 	}
 	&-aside {
 		display: flex;
+		flex-direction: row;
 		justify-content: space-between;
 		order: 1;
+		.profil-food-data{
+			display: flex;
+			max-width: 55rem;
+			@include desktop-breakpoint {
+				display: block;
+			}
+		}
 		@include desktop-breakpoint {
 			display: block;
 			order: 2;

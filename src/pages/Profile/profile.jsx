@@ -1,17 +1,12 @@
 import { useFetch } from '../../utils/hooks'
-import FoodDataCard from '../../components/FoodDataCard/foodDataCard'
-import ChartsCards from '../../components/ChartsCards/chartsCards'
-import BarChartActivity from '../../components/BarChartActivity/barChartActivity'
-import LineGraphSession from '../../components/LineGraphSession/lineGraphSession'
-import DonutGoalChart from '../../components/DonutChartGoal/donutChartGoal'
-import RadarChartPerformance from '../../components/RadarChartPerformance/radarChartPerformance'
 
-import calories from '../../assets/icons/calories.svg'
-import proteines from '../../assets/icons/proteines.svg'
-import glucides from '../../assets/icons/glucides.svg'
-import lipides from '../../assets/icons/lipides.svg'
-import './Profile.scss';
 import { useUser } from '../../utils/context/UserProvider/userProvider'
+
+import ProfileFoodData from '../../components/ProfileFoodData/profileFoodData'
+import ProfileHeader from '../../components/ProfileHeader/profileHeader'
+import ProfileCharts from '../../components/ProfileCharts/profileCharts'
+
+import './Profile.scss';
 
 function Profile() {
   document.title = 'Profil - SportSee'
@@ -93,86 +88,17 @@ function Profile() {
 		<section className="profil-wrapper">
 			{userData && (
 				<div className="profil">
-					<h1 className="profil-title">
-						Bonjour{' '}
-						<span className="profil-firstName">
-							{userData.userInfos.firstName}
-						</span>
-					</h1>
-					<p className="profil-subtitle">
-						Félicitation ! Vous avez explosé vos objectifs hier 👏
-					</p>
+					<ProfileHeader userFormatData={userData} />
 					<div className="dashboard">
 						<div className="dashboard-charts-wrapper">
-							<div className="activity-charts">
-								{activityData && (
-									<BarChartActivity
-										data={activityData.sessions}
-									/>
-								)}
-							</div>
-							<div className="small-card-wrapper">
-								{averageSessionsData && (
-									<ChartsCards
-										className="average-sessions"
-										content={
-											<LineGraphSession
-												data={averageSessionsData.sessions}
-											/>
-										}
-									/>
-								)}
-
-								{performanceData && (
-									<ChartsCards
-										className="performance"
-										content={
-											<RadarChartPerformance
-												data={performanceData}
-											/>
-										}
-									/>
-								)}
-
-								
-								{userData && (
-									<ChartsCards
-										className="score"
-										content={<DonutGoalChart data={userData} />}
-									/>
-								)}
-							</div>
+							<ProfileCharts 	activityFormatData={activityData} 
+											averageSessionsFormatData={averageSessionsData} 
+											performanceFormatData={performanceData} 
+											userFormatData={userData} />
 						</div>
 
 						<aside className="dashboard-aside">
-							<FoodDataCard
-								userKeyData={userData.keyData.calorieCount}
-								unit="kCal"
-								subtitle="Calories"
-								className="calorie"
-								logo={calories}
-							/>
-							<FoodDataCard
-								userKeyData={userData.keyData.proteinCount}
-								unit="g"
-								subtitle="Proteines"
-								className="protein"
-								logo={proteines}
-							/>
-							<FoodDataCard
-								userKeyData={userData.keyData.carbohydrateCount}
-								unit="g"
-								subtitle="Glucides"
-								className="carbohydrate"
-								logo={glucides}
-							/>
-							<FoodDataCard
-								userKeyData={userData.keyData.lipidCount}
-								unit="g"
-								subtitle="Lipides"
-								className="lipid"
-								logo={lipides}
-							/>
+							<ProfileFoodData userFormatData={userData} />
 						</aside>
 					</div>
 				</div>
