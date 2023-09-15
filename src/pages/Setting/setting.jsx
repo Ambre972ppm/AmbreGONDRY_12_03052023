@@ -1,3 +1,4 @@
+// Import du fichier de style
 import './Setting.scss';
 
 function Setting() {
